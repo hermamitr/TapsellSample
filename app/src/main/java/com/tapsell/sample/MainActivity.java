@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         btnShowAd.setEnabled(false);
         btnCheckCTAAvailability.setEnabled(false);
 
-        if (Build.VERSION.SDK_INT >= 23) {
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP_MR1) {
             int resultCoarseLocation = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
             int resultReadPhoneState = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE);
             if (resultCoarseLocation == PackageManager.PERMISSION_GRANTED && resultReadPhoneState == PackageManager.PERMISSION_GRANTED)
